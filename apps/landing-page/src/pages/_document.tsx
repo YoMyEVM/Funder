@@ -16,7 +16,7 @@ class MyDocument extends Document {
   }
 
   render() {
-    const title = 'DevFunder'
+    const title = 'Funder.Fun'
     const description =
       'Welcome to Cabana, a suite of open source interfaces and tools for the PoolTogether Hyperstructure.'
     const keywords = 'pooltogether prize savings win save protocol blockchain tools'

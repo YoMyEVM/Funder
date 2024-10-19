@@ -1,6 +1,6 @@
 {
-  "short_name": "DevFunder Factory",
-  "name": "DevFunder Factory App",
+  "short_name": "Funder.Fun Factory",
+  "name": "Funder.Fun Factory App",
   "description": "Create and manage your own ERC-4626 vault.",
   "start_url": "/",
   "scope": "/",

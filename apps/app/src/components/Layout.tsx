@@ -97,7 +97,7 @@ export const Layout = (props: LayoutProps) => {
   return (
     <div className='flex flex-col min-h-screen'>
       <Head>
-        <title>{`DevFunder${!!pageTitle ? ` | ${pageTitle}` : ''}`}</title>
+        <title>{`Funder.Fun${!!pageTitle ? ` | ${pageTitle}` : ''}`}</title>
       </Head>
 
       <Navbar />

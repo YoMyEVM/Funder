@@ -1,6 +1,6 @@
 {
-  "short_name": "DevFunder",
-  "name": "DevFunder APP",
+  "short_name": "Funder.Fun",
+  "name": "Funder.Fun APP",
   "description": "Browse, deposit into and withdraw from vaults.",
   "start_url": "/",
   "scope": "/",

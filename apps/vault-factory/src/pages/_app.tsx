@@ -20,7 +20,7 @@ export default function MyApp(props: AppProps) {
         <RainbowKitProvider
           theme={ptRainbowTheme()}
           showRecentTransactions={true}
-          appInfo={{ appName: 'DevFunder Factory' }}
+          appInfo={{ appName: 'Funder.Fun Factory' }}
         >
           <AppContainer {...props} />
         </RainbowKitProvider>
