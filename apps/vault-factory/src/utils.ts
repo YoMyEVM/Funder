@@ -12,7 +12,11 @@ export const createCustomWagmiConfig = () => {
   const networks = Object.values(WAGMI_CHAINS).filter(
     (chain) =>
       chain.id === NETWORK.mainnet ||
-      (SUPPORTED_NETWORKS.includes(chain.id as number) && !!RPC_URLS[chain.id])
+      chain.id === NETWORK.optimism ||
+      chain.id === NETWORK.scroll ||
+      chain.id === NETWORK.arbitrum ||
+      chain.id === NETWORK.gnosis ||
+      chain.id === NETWORK.base
   ) as any as [Chain, ...Chain[]]
 
   return createConfig({
@@ -99,7 +103,7 @@ const getNetworkTransports = (networks: (keyof typeof RPC_URLS)[]) => {
 }
 
 /**
- * Returns true if the string only include valid characters, false otherwise
+ * Returns true if the string only includes valid characters, false otherwise
  *
  * This includes letters, numbers and some common symbols (".", "_", "-", "'", "/")
  * @param str the string to check

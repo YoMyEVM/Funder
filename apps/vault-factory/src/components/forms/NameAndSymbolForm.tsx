@@ -59,7 +59,6 @@ export const NameAndSymbolForm = (props: NameAndSymbolFormProps) => {
           }}
           defaultValue={defaultName}
           label='Vault Name'
-          needsOverride={true}
           className='w-full max-w-md'
         />
         <SimpleInput
