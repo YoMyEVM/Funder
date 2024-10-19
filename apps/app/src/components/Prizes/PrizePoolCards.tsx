@@ -10,7 +10,7 @@ export const PrizePoolCards = () => {
   return (
     <div
       className={classNames(
-        'flex flex-col w-full items-center gap-4 rounded-lg md:grid md:w-auto md:p-4',
+        'flex flex-col w-full items-center gap-1 rounded-sm sm:grid sm:w-auto md:p-3',
         {
           'grid-cols-1': numPrizePools === 1,
           'grid-cols-2': numPrizePools === 2 || numPrizePools === 4,
@@ -26,7 +26,7 @@ export const PrizePoolCards = () => {
         >
           <PrizePoolCard
             prizePool={prizePool}
-            className='w-full hover:bg-pt-purple-50/20 md:w-auto md:min-w-[22rem]'
+            className='w-full hover:bg-pt-purple-40/20 md:w-auto md:min-w-[16rem]'
           />
         </Link>
       ))}

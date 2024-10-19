@@ -17,7 +17,6 @@ import { trackDeposit } from 'src/utils'
 import { useAccount } from 'wagmi'
 import { FATHOM_EVENTS } from '@constants/config'
 import { useWalletId } from '@hooks/useWalletId'
-import { Footer } from './Footer'
 import { CheckPrizesModal } from './Modals/CheckPrizesModal'
 import { DelegateModal } from './Modals/DelegateModal'
 import { DepositModal } from './Modals/DepositModal'
@@ -98,7 +97,7 @@ export const Layout = (props: LayoutProps) => {
   return (
     <div className='flex flex-col min-h-screen'>
       <Head>
-        <title>{`Cabana App${!!pageTitle ? ` | ${pageTitle}` : ''}`}</title>
+        <title>{`DevFunder${!!pageTitle ? ` | ${pageTitle}` : ''}`}</title>
       </Head>
 
       <Navbar />
@@ -154,14 +153,13 @@ export const Layout = (props: LayoutProps) => {
 
       <main
         className={classNames(
-          'w-full max-w-screen-xl min-h-[90vh] relative flex flex-col flex-grow items-center mx-auto px-4 py-8 mb-40 md:px-8',
+          'w-full max-w-screen-xl min-h-[90vh] relative flex flex-col flex-grow items-center mx-auto px-4 py-8 mb-0 md:px-8',
           className
         )}
       >
         {isBrowser && router.isReady && <>{children}</>}
       </main>
 
-      <Footer />
     </div>
   )
 }

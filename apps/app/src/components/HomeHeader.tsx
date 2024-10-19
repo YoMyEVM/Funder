@@ -33,7 +33,7 @@ export const HomeHeader = () => {
 
   return (
     <>
-      <div className='flex flex-col items-center gap-3'>
+      <div className='flex flex-col items-center gap-2'>
         <span
           className={classNames(
             'w-2/3 flex flex-wrap justify-center text-center text-[1.75rem] font-grotesk font-bold',
@@ -45,7 +45,6 @@ export const HomeHeader = () => {
             amount: () => <TotalPrizeValue />
           })}
         </span>
-        <span className='text-center text-pt-purple-100'>{t('withdrawAnyTime')}</span>
       </div>
     </>
   )
@@ -66,7 +65,8 @@ const TokenFlipper = (props: { className?: string }) => {
         '0xadbb23bcc3c1b9810491897cb0690cf645b858b1',
         '0xa0a215de234276cac1b844fd58901351a50fec8a',
         '0x894d6ea97767ebecefe01c9410f6bd67935aa952',
-        '0x1dc5c0f8668a9f54ed922171d578011850ca0341'
+        '0x1dc5c0f8668a9f54ed922171d578011850ca0341',
+        '0x395ae52bb17aef68c2888d941736a71dc6d4e125'
       ],
       [NETWORK.base]: ['0x89d0f320ac73dd7d9513ffc5bc58d1161452a657']
     }

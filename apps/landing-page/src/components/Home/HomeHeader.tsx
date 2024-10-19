@@ -1,8 +1,4 @@
-import { useScreenSize } from '@shared/generic-react-hooks'
-import { Button } from '@shared/ui'
-import { LINKS } from '@shared/utilities'
 import classNames from 'classnames'
-import Image from 'next/image'
 
 interface HomeHeaderProps {
   className?: string
