@@ -2,7 +2,6 @@ import { useScreenSize } from '@shared/generic-react-hooks'
 import { Button, Logo } from '@shared/ui'
 import { LINKS } from '@shared/utilities'
 import classNames from 'classnames'
-import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { ReactNode } from 'react'
@@ -25,9 +24,6 @@ export const Navbar = (props: NavbarProps) => {
       >
         <Link href='/'>
           <Logo smLogoClassName='w-11' mdLogoClassName='w-52' />
-        </Link>
-        <Link href={LINKS.protocolLandingPage} target='_blank'>
-          <PoweredByPT />
         </Link>
         <div className='hidden gap-6 items-center md:flex'>
           <NavbarActions />
@@ -68,14 +64,13 @@ interface NavbarActionsProps {
 }
 
 const NavbarActions = (props: NavbarActionsProps) => {
-  const { linkClassName, buttonClassName, innerButtonClassName } = props
+  const { buttonClassName, innerButtonClassName } = props
 
   const { isMobile } = useScreenSize()
 
   return (
     <>
-      <NavbarLink href={LINKS.docs} name='Docs' className={linkClassName} />
-      <NavbarLink href='/tools' name='Tools' className={linkClassName} />
+
       <Button
         href={LINKS.app}
         target='_blank'
@@ -117,20 +112,5 @@ const NavbarLink = (props: NavbarLinkProps) => {
     >
       {name}
     </Link>
-  )
-}
-
-const PoweredByPT = () => {
-  return (
-    <div className='flex flex-col items-center'>
-      <span className='text-xs text-pt-purple-300 whitespace-nowrap md:text-base'>Powered by</span>
-      <Image
-        src='/ptLogo.svg'
-        alt='PoolTogether'
-        width={183}
-        height={72}
-        className='w-24 h-auto md:w-32'
-      />
-    </div>
   )
 }

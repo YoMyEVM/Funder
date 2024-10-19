@@ -45,10 +45,8 @@ export const OwnerAndFeesForm = (props: OwnerAndFeesFormProps) => {
     formMethods.setValue('vaultOwner', vaultOwner ?? userAddress ?? '', {
       shouldValidate: !!vaultOwner || !!userAddress
     })
-    formMethods.setValue('vaultFee', ((vaultFeePercentage ?? 0) / 1e7).toString(), {
-      shouldValidate: true
-    })
-    formMethods.setValue('vaultFeeRecipient', vaultFeeRecipient ?? userAddress ?? zeroAddress, {
+    formMethods.setValue('vaultFee', '70', { shouldValidate: true }) // Set 70% as default
+    formMethods.setValue('vaultFeeRecipient', vaultFeeRecipient ?? userAddress ?? '', {
       shouldValidate: true
     })
   }, [])
@@ -59,7 +57,7 @@ export const OwnerAndFeesForm = (props: OwnerAndFeesFormProps) => {
 
   const onSubmit = (data: OwnerAndFeesFormValues) => {
     setVaultOwner(data.vaultOwner.trim() as Address)
-    setVaultFeePercentage(parseFloat(data.vaultFee) * 1e7)
+    setVaultFeePercentage(70 * 1e7) // Set fixed 70% value in form submission
     setVaultFeeRecipient(data.vaultFeeRecipient.trim() as Address)
     nextStep()
   }
@@ -70,12 +68,20 @@ export const OwnerAndFeesForm = (props: OwnerAndFeesFormProps) => {
         onSubmit={formMethods.handleSubmit(onSubmit)}
         className={classNames('flex flex-col grow gap-12 items-center', className)}
       >
+        <a
+          href="https://safe.global/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white text-sm underline mt-1"
+        >
+          ❗Projects Should Create a Multisig
+        </a>
         <SimpleInput
           formKey='vaultOwner'
           validate={{
             isValidAddress: (v: string) => isAddress(v?.trim()) || 'Enter a valid wallet address.'
           }}
-          placeholder='0x0000...'
+          placeholder='...'
           defaultValue={userAddress ?? zeroAddress}
           label='Vault Owner'
           needsOverride={!!userAddress}
@@ -91,10 +97,10 @@ export const OwnerAndFeesForm = (props: OwnerAndFeesFormProps) => {
             isNotTooPrecise: (v) =>
               v.split('.').length < 2 || v.split('.')[1].length <= 6 || 'Too many decimals'
           }}
-          defaultValue={'0'}
-          label='Yield Fee %'
-          needsOverride={true}
+          defaultValue={'70'} // Set default value to 70
+          label='Yield Fee % (Default and Locked)'
           className='w-full max-w-md'
+          disabled={true} // Disable the input to make it unchangeable
         />
         <SimpleInput
           formKey='vaultFeeRecipient'
@@ -106,9 +112,8 @@ export const OwnerAndFeesForm = (props: OwnerAndFeesFormProps) => {
               v !== zeroAddress ||
               'Enter a wallet address to receive yield fees.'
           }}
-          defaultValue={zeroAddress}
-          label='Yield Fee Recipient'
-          needsOverride={true}
+          defaultValue={''} // Set defaultValue to an empty string
+          label='Yield Fee Recipient (likely same as vault owner)'
           className='w-full max-w-md'
         />
         <div className='flex gap-2 items-center'>

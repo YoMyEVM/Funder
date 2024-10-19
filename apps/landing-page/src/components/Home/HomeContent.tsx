@@ -1,6 +1,4 @@
 import classNames from 'classnames'
-import { DocsSection } from './DocsSection'
-import { FaqSection } from './FaqSection'
 import { HowItWorksSection } from './HowItWorksSection'
 
 interface HomeContentProps {
@@ -18,8 +16,6 @@ export const HomeContent = (props: HomeContentProps) => {
       )}
     >
       <HowItWorksSection />
-      <DocsSection />
-      <FaqSection className='max-w-5xl' />
     </div>
   )
 }

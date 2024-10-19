@@ -35,9 +35,6 @@ export const HomePageContent = () => {
       <VaultsIntro />
       <div className='flex flex-col gap-4 items-center sm:flex-row'>
         <DeployNewVaultButton />
-        <Button href={LINKS.factoryDocs} target='_blank'>
-          Read the Docs
-        </Button>
       </div>
     </div>
   )
@@ -61,7 +58,7 @@ const DeployNewVaultButton = (props: DeployNewVaultButtonProps) => {
 
   return (
     <PurpleButton onClick={onClickDeploy} className={className}>
-      Deploy a Prize Vault
+      Let's Go!
     </PurpleButton>
   )
 }

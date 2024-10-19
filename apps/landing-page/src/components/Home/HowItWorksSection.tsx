@@ -10,22 +10,16 @@ export const HowItWorksSection = (props: HowItWorksSectionProps) => {
 
   return (
     <section className={classNames('w-full flex flex-col gap-6 items-center md:gap-12', className)}>
-      <span className='md:text-xl'>How It Works</span>
       <div className='flex flex-col gap-10 md:flex-row'>
         <HowItWorksItem
-          imgSrc='/depositGraphic.svg'
-          title='Deposit Tokens'
-          description='Deposit for a chance to win'
-        />
-        <HowItWorksItem
-          imgSrc='/prizesGraphic.svg'
-          title='Win Prizes'
-          description='Yield from deposits fund prizes'
-        />
-        <HowItWorksItem
           imgSrc='/noLossGraphic.svg'
-          title='No Loss'
-          description='No fees, withdraw any time'
+          title='Deploy Builder Stake Vault'
+          description=''
+        />
+        <HowItWorksItem
+          imgSrc='/depositGraphic.svg'
+          title='Earn By Funding Projects'
+          description=''
         />
       </div>
     </section>
