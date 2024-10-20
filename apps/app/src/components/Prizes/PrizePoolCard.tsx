@@ -45,7 +45,7 @@ export const PrizePoolCard = (props: PrizePoolCardProps) => {
         {isFetchedGrandPrize ? (
           !!grandPrize ? (
             <>
-              <span className='text-7xl text-pt-teal font-bold'>
+              <span className='text-7xl text-white font-bold'>
                 <TokenValue token={grandPrize} hideZeroes={true} fallback={<></>} />
               </span>
               {!isTokenEquivalentHidden && (

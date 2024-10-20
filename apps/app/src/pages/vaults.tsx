@@ -23,7 +23,7 @@ export const getStaticProps: GetStaticProps<VaultsPageProps> = async ({ locale }
 export default function VaultsPage() {
   return (
     <Layout className='gap-6 lg:gap-8'>
-      <VaultsHeader />
+
       <VaultFilters />
       <VaultsDisplay />
     </Layout>
