@@ -14,22 +14,22 @@ export const HowItWorksSection = (props: HowItWorksSectionProps) => {
       <div className='flex flex-col gap-10 md:flex-row md:flex-wrap md:justify-center'>
         <HowItWorksItem
           imgSrc='/Deploy.svg'
-          title='Deploy a Vault and Fund Anything'
+          title='Deploy a Vault & Fund Anything'
           link='/vault-deploy'
         />
         <HowItWorksItem
           imgSrc='/Fund.svg'
-          title='Earn and Win by Funding Projects'
+          title='Earn & Win by Funding Projects'
           link='/funding-projects'
         />
         <HowItWorksItem
           imgSrc='/Hack.svg'
-          title='Keep your Money and Host a Hackathon'
+          title='Host a Hackathon w/o Spending'
           link='/host-hackathon'
         />
         <HowItWorksItem
           imgSrc='/Market.svg'
-          title="Don't Waste Money on Marketing Spend"
+          title="No Spend Captive Marketing"
           link='/marketing-campaign'
         />
       </div>
@@ -48,9 +48,9 @@ const HowItWorksItem = (props: HowItWorksItemProps) => {
   const { imgSrc, title, link, className } = props
 
   return (
-    <Link href={link} className={classNames('flex flex-col gap-3 md:gap-6 group', className)} style={{ width: '270px' }}>
+    <Link href={link} className={classNames('flex flex-col gap-3 md:gap-6 group', className)} style={{ width: '230px' }}>
       <div className="relative">
-        <Image src={imgSrc} alt={title} width={250} height={200} className='drop-shadow-lg group-hover:brightness-110' />
+        <Image src={imgSrc} alt={title} width={230} height={200} className='drop-shadow-lg group-hover:brightness-110' />
       </div>
       <div className='flex flex-col gap-2 items-center text-center'>
         <span className='text-3xl font-medium group-hover:text-pt-purple-100 transition-colors duration-300'>

@@ -33,86 +33,19 @@ export default function VaultsPage() {
       
       {/* Fund Filters */}
       <div className="flex justify-center space-x-4 my-6">
-        <button
-          onClick={() => handleFundFilterChange('Lotto')}
-          className={classNames(
-            selectedFundType === 'Lotto'
-              ? 'bg-purple-500 text-white border-2 border-transparent rounded-full px-4 py-2'
-              : 'bg-transparent text-teal-400 border-2 border-teal-400 rounded-full px-4 py-2 hover:bg-teal-100 hover:bg-opacity-10'
-          )}
-        >
-          Lotto
-        </button>
-        <button
-          onClick={() => handleFundFilterChange('Projects')}
-          className={classNames(
-            selectedFundType === 'Projects'
-              ? 'bg-purple-500 text-white border-2 border-transparent rounded-full px-4 py-2'
-              : 'bg-transparent text-teal-400 border-2 border-teal-400 rounded-full px-4 py-2 hover:bg-teal-100 hover:bg-opacity-10'
-          )}
-        >
-          Projects
-        </button>
-        <button
-          onClick={() => handleFundFilterChange('NFTs')}
-          className={classNames(
-            selectedFundType === 'NFTs'
-              ? 'bg-purple-500 text-white border-2 border-transparent rounded-full px-4 py-2'
-              : 'bg-transparent text-teal-400 border-2 border-teal-400 rounded-full px-4 py-2 hover:bg-teal-100 hover:bg-opacity-10'
-          )}
-        >
-          NFTs
-        </button>
-        <button
-          onClick={() => handleFundFilterChange('Open Source')}
-          className={classNames(
-            selectedFundType === 'Open Source'
-              ? 'bg-purple-500 text-white border-2 border-transparent rounded-full px-4 py-2'
-              : 'bg-transparent text-teal-400 border-2 border-teal-400 rounded-full px-4 py-2 hover:bg-teal-100 hover:bg-opacity-10'
-          )}
-        >
-          Open Source
-        </button>
-        <button
-          onClick={() => handleFundFilterChange('Causes')}
-          className={classNames(
-            selectedFundType === 'Causes'
-              ? 'bg-purple-500 text-white border-2 border-transparent rounded-full px-4 py-2'
-              : 'bg-transparent text-teal-400 border-2 border-teal-400 rounded-full px-4 py-2 hover:bg-teal-100 hover:bg-opacity-10'
-          )}
-        >
-          Causes
-        </button>
-        <button
-          onClick={() => handleFundFilterChange('Community Tokens')}
-          className={classNames(
-            selectedFundType === 'Community Tokens'
-              ? 'bg-purple-500 text-white border-2 border-transparent rounded-full px-4 py-2'
-              : 'bg-transparent text-teal-400 border-2 border-teal-400 rounded-full px-4 py-2 hover:bg-teal-100 hover:bg-opacity-10'
-          )}
-        >
-          Community Tokens
-        </button>
-        <button
-          onClick={() => handleFundFilterChange('Artists')}
-          className={classNames(
-            selectedFundType === 'Artists'
-              ? 'bg-purple-500 text-white border-2 border-transparent rounded-full px-4 py-2'
-              : 'bg-transparent text-teal-400 border-2 border-teal-400 rounded-full px-4 py-2 hover:bg-teal-100 hover:bg-opacity-10'
-          )}
-        >
-          Artists
-        </button>
-        <button
-          onClick={() => handleFundFilterChange('Marketing')}
-          className={classNames(
-            selectedFundType === 'Marketing'
-              ? 'bg-purple-500 text-white border-2 border-transparent rounded-full px-4 py-2'
-              : 'bg-transparent text-teal-400 border-2 border-teal-400 rounded-full px-4 py-2 hover:bg-teal-100 hover:bg-opacity-10'
-          )}
-        >
-          Marketing
-        </button>
+        {['Yield Lotto', 'Projects', 'NFTs', 'Open Source', 'Causes', 'Community Tokens', 'Artists', 'Marketing'].map((fundType) => (
+          <button
+            key={fundType}
+            onClick={() => handleFundFilterChange(fundType)}
+            className={classNames(
+              selectedFundType === fundType
+                ? 'bg-pt-pink-dark text-white border-2 border-transparent rounded-full px-4 py-2'
+                : 'bg-transparent text-pt-teal-light border-2 border-pt-teal-light rounded-full px-4 py-2 hover:bg-teal-100 hover:bg-opacity-10'
+            )}
+          >
+            {fundType}
+          </button>
+        ))}
       </div>
 
       {/* Existing Vault Filters */}
