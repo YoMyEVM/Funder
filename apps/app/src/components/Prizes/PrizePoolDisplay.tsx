@@ -47,13 +47,11 @@ interface PrizePoolCarouselProps {
   className?: string
 }
 
-// TODO: animate between different prize pools
 const PrizePoolCarousel = (props: PrizePoolCarouselProps) => {
   const { className } = props
 
   const searchParams = useSearchParams()
 
-  // TODO: should ideally highlight the largest prize pool if no network is set by searchParams
   const [prizePoolIndex, setPrizePoolIndex] = useState<number>(0)
 
   const prizePools = useSupportedPrizePools()
@@ -91,12 +89,7 @@ const PrizePoolCarousel = (props: PrizePoolCarouselProps) => {
   const nextPrizePoolIndex = prizePoolIndex === prizePoolsArray.length - 1 ? 0 : prizePoolIndex + 1
 
   return (
-    <div
-      className={classNames(
-        'relative w-screen flex justify-center gap-8 overflow-hidden',
-        className
-      )}
-    >
+    <div className={classNames('relative w-screen flex justify-center gap-8 overflow-hidden', className)}>
       <PrizePoolPrizesCard
         prizePool={prizePoolsArray[prevPrizePoolIndex]}
         className='hidden w-[calc(100vw-4rem)] shrink-0 lg:w-[38rem] lg:flex'
@@ -109,7 +102,8 @@ const PrizePoolCarousel = (props: PrizePoolCarouselProps) => {
         prizePool={prizePoolsArray[nextPrizePoolIndex]}
         className='hidden w-[calc(100vw-4rem)] shrink-0 lg:w-[38rem] lg:flex'
       />
-      <div className='absolute w-full h-full pointer-events-none lg:bg-[linear-gradient(90deg,#21064E_15%,transparent_35%,transparent_65%,#21064E_85%)]'>
+      {/* Removed the background gradient */}
+      <div className='absolute w-full h-full pointer-events-none'>
         <div className='relative w-full h-full max-w-screen-xl mx-auto'>
           <button
             onClick={() => setPrizePoolIndex(prevPrizePoolIndex)}
