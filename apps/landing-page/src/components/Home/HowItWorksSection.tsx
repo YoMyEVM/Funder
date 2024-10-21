@@ -29,7 +29,7 @@ export const HowItWorksSection = (props: HowItWorksSectionProps) => {
         />
         <HowItWorksItem
           imgSrc='/Market.svg'
-          title=" Don't Waste Money on Marketing Spend"
+          title="Don't Waste Money on Marketing Spend"
           link='/marketing-campaign'
         />
       </div>
@@ -48,10 +48,14 @@ const HowItWorksItem = (props: HowItWorksItemProps) => {
   const { imgSrc, title, link, className } = props
 
   return (
-    <Link href={link} className={classNames('flex flex-col gap-3 md:gap-6', className)} style={{ width: '270px' }}>
-      <Image src={imgSrc} alt={title} width={250} height={200} className='drop-shadow-lg' />
+    <Link href={link} className={classNames('flex flex-col gap-3 md:gap-6 group', className)} style={{ width: '270px' }}>
+      <div className="relative">
+        <Image src={imgSrc} alt={title} width={250} height={200} className='drop-shadow-lg group-hover:brightness-110' />
+      </div>
       <div className='flex flex-col gap-2 items-center text-center'>
-        <span className='text-3xl font-medium'>{title}</span>
+        <span className='text-3xl font-medium group-hover:text-pt-purple-100 transition-colors duration-300'>
+          {title}
+        </span>
       </div>
     </Link>
   )

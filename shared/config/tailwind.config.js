@@ -23,22 +23,22 @@ module.exports = {
       colors: {
         pt: {
           purple: {
-            50: '#60e5e6',
-            100: '#60e5e6',
-            200: '#FF00FF',
-            300: '#FF00FF',
-            400: '#afb5e1',
-            500: '#FF00FF',
+            50: '#fff',
+            100: '#B8ff00',
+            200: '#FF00E6',
+            300: '#FF00E6',
+            400: '#00E0FF',
+            500: '#FF00E6',
             600: '#000',
             700: '#000',
             800: '#000',
             900: '#000',
-            DEFAULT: '#60e5e6'
+            DEFAULT: '#B8FF00'
           },
           teal: {
-            light: '#afb5e1',
-            dark: '#FF00FF',
-            DEFAULT: '#afb5e1'
+            light: '#00E0FF',
+            dark: '#FF00E6',
+            DEFAULT: '#00E0FF'
           },
           pink: {
             light: '#FA48E8',
