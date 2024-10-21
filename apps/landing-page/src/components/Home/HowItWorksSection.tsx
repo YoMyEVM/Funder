@@ -13,22 +13,22 @@ export const HowItWorksSection = (props: HowItWorksSectionProps) => {
     <section className={classNames('w-full flex flex-col gap-6 items-center md:gap-12', className)}>
       <div className='flex flex-col gap-10 md:flex-row md:flex-wrap md:justify-center'>
         <HowItWorksItem
-          imgSrc='/noLossGraphic.svg'
+          imgSrc='/Deploy.svg'
           title='Deploy a Vault and Fund Anything'
           link='/vault-deploy'
         />
         <HowItWorksItem
-          imgSrc='/depositGraphic.svg'
+          imgSrc='/Fund.svg'
           title='Earn and Win by Funding Projects'
           link='/funding-projects'
         />
         <HowItWorksItem
-          imgSrc='/noLossGraphic.svg'
+          imgSrc='/Hack.svg'
           title='Keep your Money and Host a Hackathon'
           link='/host-hackathon'
         />
         <HowItWorksItem
-          imgSrc='/depositGraphic.svg'
+          imgSrc='/Market.svg'
           title=" Don't Waste Money on Marketing Spend"
           link='/marketing-campaign'
         />
