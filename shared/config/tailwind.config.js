@@ -17,6 +17,9 @@ module.exports = {
       averta: 'Averta'
     },
     extend: {
+      fontSize: {
+        '4.5xl': '2.625rem', 
+      },
       colors: {
         pt: {
           purple: {

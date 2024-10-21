@@ -1,5 +1,6 @@
 import classNames from 'classnames'
 import Image from 'next/image'
+import Link from 'next/link'
 
 interface HowItWorksSectionProps {
   className?: string
@@ -10,16 +11,26 @@ export const HowItWorksSection = (props: HowItWorksSectionProps) => {
 
   return (
     <section className={classNames('w-full flex flex-col gap-6 items-center md:gap-12', className)}>
-      <div className='flex flex-col gap-10 md:flex-row'>
+      <div className='flex flex-col gap-10 md:flex-row md:flex-wrap md:justify-center'>
         <HowItWorksItem
           imgSrc='/noLossGraphic.svg'
-          title='Deploy Builder Stake Vault'
-          description=''
+          title='Deploy a Vault and Fund Anything'
+          link='/vault-deploy'
         />
         <HowItWorksItem
           imgSrc='/depositGraphic.svg'
-          title='Earn By Funding Projects'
-          description=''
+          title='Earn and Win by Funding Projects'
+          link='/funding-projects'
+        />
+        <HowItWorksItem
+          imgSrc='/noLossGraphic.svg'
+          title='Keep your Money and Host a Hackathon'
+          link='/host-hackathon'
+        />
+        <HowItWorksItem
+          imgSrc='/depositGraphic.svg'
+          title=" Don't Waste Money on Marketing Spend"
+          link='/marketing-campaign'
         />
       </div>
     </section>
@@ -29,20 +40,19 @@ export const HowItWorksSection = (props: HowItWorksSectionProps) => {
 interface HowItWorksItemProps {
   imgSrc: string
   title: string
-  description: string
+  link: string
   className?: string
 }
 
 const HowItWorksItem = (props: HowItWorksItemProps) => {
-  const { imgSrc, title, description, className } = props
+  const { imgSrc, title, link, className } = props
 
   return (
-    <div className={classNames('flex flex-col gap-3 md:gap-6', className)}>
-      <Image src={imgSrc} alt={title} width={340} height={265} className='drop-shadow-lg' />
+    <Link href={link} className={classNames('flex flex-col gap-3 md:gap-6', className)} style={{ width: '270px' }}>
+      <Image src={imgSrc} alt={title} width={250} height={200} className='drop-shadow-lg' />
       <div className='flex flex-col gap-2 items-center text-center'>
         <span className='text-3xl font-medium'>{title}</span>
-        <span className='text-xl text-pt-purple-100'>{description}</span>
       </div>
-    </div>
+    </Link>
   )
 }
