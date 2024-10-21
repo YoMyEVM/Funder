@@ -8,7 +8,8 @@ import { CheckPrizesBanner } from '@components/Account/CheckPrizesBanner'
 import { Layout } from '@components/Layout'
 import { PrizePoolDisplay } from '@components/Prizes/PrizePoolDisplay'
 import { PrizePoolWinners } from '@components/Prizes/PrizePoolWinners'
-import { PrizesHeader } from '@components/Prizes/PrizesHeader'
+import { PrizePoolCards } from '@components/Prizes/PrizePoolCards'
+import { HomeHeader } from '@components/HomeHeader'
 
 interface PrizesPageProps {
   messages: IntlMessages
@@ -29,7 +30,8 @@ export default function PrizesPage() {
   return (
     <Layout className='gap-8'>
       <CheckPrizesBanner />
-      <PrizesHeader />
+      <HomeHeader />
+      <PrizePoolCards />
       <PrizePoolDisplay className='mt-8' />
       <PrizePoolWinners className='mt-8' />
     </Layout>

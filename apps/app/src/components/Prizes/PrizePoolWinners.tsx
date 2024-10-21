@@ -55,7 +55,7 @@ export const PrizePoolWinners = (props: PrizePoolWinnersProps) => {
       return [...draws]
         .filter((draw) => draw.prizeClaims.length > 0)
         .reverse()
-        .slice(isLastDrawOngoing ? 1 : 0, isLastDrawOngoing ? 4 : 3)
+        .slice(isLastDrawOngoing ? 1 : 0, isLastDrawOngoing ? 8 : 7)
     }
   }, [draws, isLastDrawOngoing])
 

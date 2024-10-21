@@ -66,6 +66,7 @@ const TokenFlipper = (props: { className?: string }) => {
         '0xa0a215de234276cac1b844fd58901351a50fec8a',
         '0x894d6ea97767ebecefe01c9410f6bd67935aa952',
         '0x1dc5c0f8668a9f54ed922171d578011850ca0341',
+        '0x395ae52bb17aef68c2888d941736a71dc6d4e125',
         '0x395ae52bb17aef68c2888d941736a71dc6d4e125'
       ],
       [NETWORK.base]: ['0x89d0f320ac73dd7d9513ffc5bc58d1161452a657']

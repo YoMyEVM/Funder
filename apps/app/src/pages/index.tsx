@@ -5,9 +5,9 @@ import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
 import { getMessages } from 'src/utils'
-import { HomeHeader } from '@components/HomeHeader'
+
 import { Layout } from '@components/Layout'
-import { PrizePoolCards } from '@components/Prizes/PrizePoolCards'
+
 
 interface HomePageProps {
   messages: IntlMessages
@@ -27,8 +27,9 @@ export default function HomePage() {
 
   return (
     <Layout className='gap-2'>
-      <HomeHeader />
-      <PrizePoolCards />
+      <p>.</p>
     </Layout>
   )
 }
+
+
