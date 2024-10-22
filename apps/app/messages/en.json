@@ -46,7 +46,10 @@
     "prizes": "Prizes",
     "vaults": "Vaults",
     "vault": "Vault",
-    "account": "Account"
+    "account": "Account",
+    "launch":"Launch",
+    "hack": "Hack⇗",
+    "marketing":"Marketing⇗"
   },
   "Home": {
     "winUpTo": "Stake <token></token> to win up to <amount></amount>",

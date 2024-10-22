@@ -24,7 +24,10 @@
     "prizes": "Призы",
     "vaults": "Своды",
     "vault": "Свод",
-    "account": "Счет"
+    "account": "Счет",
+    "launch": "Запуск",
+    "hack": "Взлом⇗",
+    "marketing": "Маркетинг⇗"
   },
   "Home": {
     "withdrawAnyTime": "Вы можете снять весь депозит в любое время"

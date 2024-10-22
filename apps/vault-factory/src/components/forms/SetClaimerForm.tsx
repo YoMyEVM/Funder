@@ -63,6 +63,7 @@ export const SetClaimerForm = (props: SetClaimerFormProps) => {
           label='Claimer Contract'
           needsOverride={true}
           className='w-full max-w-md'
+          readOnly={true} // Locking the field from being edited
         />
         {!isOnlyStep ? (
           <div className='flex gap-2 items-center'>

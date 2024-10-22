@@ -25,6 +25,7 @@ import { SettingsModal } from './Modals/SettingsModal'
 import { WithdrawModal } from './Modals/WithdrawModal'
 import { Navbar } from './Navbar'
 import { VaultListHandler } from './VaultListHandler'
+import { Footer } from './Footer'
 
 interface LayoutProps {
   children: ReactNode
@@ -89,6 +90,9 @@ export const Layout = (props: LayoutProps) => {
     account: t_nav('account'),
     prizes: t_nav('prizes'),
     vaults: t_nav('vaults'),
+    launch: t_nav('launch'),
+    marketing: t_nav('marketing'),
+    hack: t_nav('hack'),
     vault: t_nav('vault')
   }
 
@@ -159,7 +163,7 @@ export const Layout = (props: LayoutProps) => {
       >
         {isBrowser && router.isReady && <>{children}</>}
       </main>
-
+      <Footer />
     </div>
   )
 }

@@ -37,7 +37,10 @@
     "prizes": "Preise",
     "vaults": "Vaults",
     "vault": "Vault",
-    "account": "Konto"
+    "account": "Konto",
+    "launch": "Start",
+    "hack": "Hack⇗",
+    "marketing": "Marketing⇗"
   },
   "Home": {
     "withdrawAnyTime": "Du kannst Deine gesamte Einzahlung jederzeit abheben"

@@ -28,7 +28,10 @@
     "prizes": "Premios",
     "vaults": "Valores",
     "vault": "Bóveda",
-    "account": "Cuenta"
+    "account": "Cuenta",
+    "launch": "Lanzamiento",
+    "hack": "Hackeo⇗",
+    "marketing": "Marketing⇗"
   },
   "Home": {
     "withdrawAnyTime": "Puedes retirar tu depósito completo en cualquier momento"

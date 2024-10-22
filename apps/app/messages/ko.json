@@ -24,7 +24,10 @@
     "prizes": "상품들",
     "vaults": "금고들",
     "vault": "금고",
-    "account": "계정"
+    "account": "계정",
+    "launch": "출시",
+    "hack": "해킹⇗",
+    "marketing": "마케팅⇗"
   },
   "Home": {
     "withdrawAnyTime": "언제든지 전액을 출금할 수 있습니다"
