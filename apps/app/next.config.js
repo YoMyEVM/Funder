@@ -1,3 +1,6 @@
+const events = require('events');
+events.EventEmitter.defaultMaxListeners = 15;
+
 module.exports = {
   reactStrictMode: true,
   transpilePackages: [

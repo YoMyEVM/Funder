@@ -22,7 +22,7 @@ export const Navbar = () => {
   const navLinks: NavbarLink[] = [
     { href: '/prizes', name: t_nav('prizes') },
     { href: '/vaults', name: t_nav('vaults') },
-    { href: '/account', name: t_nav('account') }
+    { href: '/account', name: t_nav('account') } //add hack, launch,ethdenver
   ]
 
   return (
@@ -37,7 +37,8 @@ export const Navbar = () => {
         className='font-grotesk'
       >
         {/* Left Side Branding */}
-        <Link href='/' className='cursor-pointer z-30'>
+        {/* Update the href to link to the landing page */}
+        <Link href='/landing-page' className='cursor-pointer z-30'>
           <Logo smLogoClassName='w-8' mdLogoClassName='w-[150px]' />
         </Link>
 

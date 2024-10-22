@@ -27,7 +27,7 @@ export default function HomePage() {
 
   return (
     <Layout className='gap-2'>
-      <p>.</p>
+      <p>About</p>
     </Layout>
   )
 }

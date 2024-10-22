@@ -993,7 +993,6 @@ export const DOMAINS = {
   swaps: 'https://swap.cabana.fi',
   rewardsBuilder: 'https://rewards.cabana.fi',
   flashLiquidator: 'https://flash.cabana.fi',
-  migrations: 'https://migrate.cabana.fi',
   builders: 'https://builders.cabana.fi'
 } as const satisfies { [name: string]: `https://${string}` }
 
@@ -1014,7 +1013,6 @@ export const LINKS = {
   factoryDocs: `${DOMAINS.docs}/cabana-tools/cabana-factory`,
   listDocs: `${DOMAINS.docs}/cabana-tools/cabana-lists`,
   analyticsDocs: `${DOMAINS.docs}/cabana-tools/cabanalytics`,
-  swapDocs: `${DOMAINS.docs}/cabana-tools/cabana-swaps`,
   flashDocs: `${DOMAINS.docs}/cabana-tools/cabana-flash`,
   appGuides: `${DOMAINS.docs}/cabana-app/guides`,
   toolGuides: `${DOMAINS.docs}/cabana-tools/guides`,

@@ -22,7 +22,7 @@ export const getStaticProps: GetStaticProps<VaultsPageProps> = async ({ locale }
 
 export default function VaultsPage() {
   // Track the selected fund type
-  const [selectedFundType, setSelectedFundType] = useState('Lotto') // Default to "Lotto"
+  const [selectedFundType, setSelectedFundType] = useState('Yield Lotto') 
 
   const handleFundFilterChange = (fundType: string) => {
     setSelectedFundType(fundType)
@@ -32,8 +32,8 @@ export default function VaultsPage() {
     <Layout className='gap-6 lg:gap-8'>
       
       {/* Fund Filters */}
-      <div className="flex justify-center space-x-4 my-6">
-        {['Yield Lotto', 'Projects', 'NFTs', 'Open Source', 'Causes', 'Community Tokens', 'Artists', 'Marketing'].map((fundType) => (
+      <div className="flex justify-center space-x-3 my-6">
+        {['Yield Lotto', 'Open Source', 'Projects', 'NFTs', 'Culture/Meme', 'Causes','Creators', 'Artists','NSFW' ,'Marketing' ].map((fundType) => (
           <button
             key={fundType}
             onClick={() => handleFundFilterChange(fundType)}
@@ -52,14 +52,16 @@ export default function VaultsPage() {
       <VaultFilters />
 
       {/* Conditionally Display Vaults */}
-      {selectedFundType === 'Lotto' && <VaultsDisplay />} {/* Lotto content (existing vault content) */}
-      {selectedFundType === 'Projects' && <div>Display Projects Vaults</div>} {/* Placeholder for Projects */}
-      {selectedFundType === 'NFTs' && <div>Display NFTs Vaults</div>}
-      {selectedFundType === 'Open Source' && <div>Display Open Source Vaults</div>}
-      {selectedFundType === 'Causes' && <div>Display Causes Vaults</div>}
-      {selectedFundType === 'Community Tokens' && <div>Display Community Tokens Vaults</div>}
-      {selectedFundType === 'Artists' && <div>Display Artists Vaults</div>}
-      {selectedFundType === 'Marketing' && <div>Display Marketing Vaults</div>}
+      {selectedFundType === 'Yield Lotto' && <VaultsDisplay />} 
+      {selectedFundType === 'Open Source' && <div>Fund Open Source</div>}
+      {selectedFundType === 'Projects' && <div>Projects Vaults</div>} 
+      {selectedFundType === 'NFTs' && <div>NFTs Vaults</div>}
+      {selectedFundType === 'Culture/Meme' && <div>Meme</div>}
+      {selectedFundType === 'Causes' && <div>Causes Vaults</div>}
+      {selectedFundType === 'Creators' && <div>Creator Vaults </div>}
+      {selectedFundType === 'Artists' && <div>Artists Vaults</div>}
+      {selectedFundType === 'NSFW' && <div>NSFW Vaults</div>}
+      {selectedFundType === 'Marketing' && <div>Marketing</div>}
     </Layout>
   )
 }

@@ -73,21 +73,6 @@ const SimpleFooter = (props: { className?: string }) => {
         props.className
       )}
     >
-      <div className='flex flex-col gap-2 items-center text-center'>
-        <span className='text-sm font-medium'>
-          Made with ❤️ & 🤖 by{' '}
-          <a href='https://g9software.xyz' target='_blank' className='hover:text-pt-teal'>
-            Generation Software
-          </a>
-        </span>
-        <span className='text-xs font-medium text-pt-pink'>
-          By using this app you are agreeing to our{' '}
-          <Link href={LINKS.termsOfService} target='_blank' className='hover:underline'>
-            Terms and Conditions
-          </Link>
-        </span>
-      </div>
-    </footer>
   )
 }
 
