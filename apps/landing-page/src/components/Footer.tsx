@@ -17,7 +17,6 @@ export const Footer = (props: FooterProps) => {
       <FooterWave />
       <div className='w-full flex flex-col gap-12 items-center justify-between px-16 bg-pt-purple-700 md:flex-row'>
         <div className='flex flex-col gap-12 px-4 md:flex-row md:px-0'>
-          <MadeBy />
           <AuditsBy />
         </div>
         <div className='flex flex-col gap-12 items-center order-first md:flex-row md:gap-6 md:items-end md:order-none'>
@@ -26,14 +25,6 @@ export const Footer = (props: FooterProps) => {
             <PoweredByPT />
           </Link>
         </div>
-      </div>
-      <div className='flex flex-col items-center text-center mx-auto mt-20 text-sm text-pt-purple-100'>
-        <Link href='/terms' className='hover:underline'>
-          Terms and Conditions
-        </Link>
-        <Link href='/privacy' className='hover:underline'>
-          Privacy Policy
-        </Link>
       </div>
     </footer>
   )
@@ -61,16 +52,7 @@ const FooterWave = () => {
   )
 }
 
-const MadeBy = () => {
-  return (
-    <div className='flex flex-col gap-3'>
-      <span className='text-center text-pt-purple-300 md:text-start'>Cabana made by</span>
-      <a href='https://g9software.xyz' target='_blank' className='opacity-50'>
-        <Image src='/generationLogo.svg' alt='Generation Software' width={261} height={38} />
-      </a>
-    </div>
-  )
-}
+
 
 const AuditsBy = () => {
   return (

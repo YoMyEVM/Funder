@@ -16,7 +16,7 @@ class MyDocument extends Document {
   }
 
   render() {
-    const title = 'Cabana Flash Liquidator'
+    const title = 'Fund Flash Liquidate'
     const description = 'Flash liquidate yield from any PoolTogether prize vault.'
     const keywords =
       'pooltogether prize savings win save protocol blockchain ethereum optimism tool flash liquidate liquidations'

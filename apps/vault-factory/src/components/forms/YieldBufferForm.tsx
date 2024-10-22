@@ -55,7 +55,7 @@ export const YieldBufferForm = (props: YieldBufferFormProps) => {
             isNotTooPrecise: (v) => v.split('.').length < 2 || 'No decimals allowed'
           }}
           defaultValue='100000'
-          label='Yield Buffer'
+          label='Yield Buffer (Default and Locked)'
           needsOverride={true}
           className='w-full max-w-md'
         />

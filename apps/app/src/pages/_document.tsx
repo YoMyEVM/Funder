@@ -3,7 +3,7 @@ import Document, { Head, Html, Main, NextScript } from 'next/document'
 
 class MyDocument extends Document {
   render() {
-    const title = 'Cabana App'
+    const title = 'Funder.Fun'
     const description = 'Browse, deposit into and withdraw from any number of PoolTogether vaults.'
     const keywords =
       'pooltogether prize savings win save protocol blockchain vault vaultlist 4626 ethereum'

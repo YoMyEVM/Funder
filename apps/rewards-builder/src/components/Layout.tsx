@@ -6,7 +6,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ReactNode } from 'react'
-import { PoweredByPT } from './PoweredByPT'
 
 interface LayoutProps {
   children: ReactNode
@@ -20,7 +19,7 @@ export const Layout = (props: LayoutProps) => {
   return (
     <div className='flex flex-col min-h-screen overflow-x-hidden'>
       <Head>
-        <title>Cabana Rewards Builder</title>
+        <title>Funder Rewards Builder</title>
       </Head>
 
       <SimpleNavbar />
@@ -40,7 +39,7 @@ export const Layout = (props: LayoutProps) => {
         {children}
       </main>
 
-      <SimpleFooter isSidebarActive={isSidebarActive} />
+
     </div>
   )
 }
@@ -75,46 +74,5 @@ const SimpleNavbar = (props: SimpleNavbarProps) => {
         accountStatus='full'
       />
     </div>
-  )
-}
-
-interface SimpleFooterProps {
-  isSidebarActive?: boolean
-  className?: string
-}
-
-const SimpleFooter = (props: SimpleFooterProps) => {
-  const { isSidebarActive, className } = props
-
-  return (
-    <footer
-      className={classNames(
-        'flex flex-col gap-6 items-center mt-auto p-6 overflow-hidden z-20 lg:h-28 lg:flex-row lg:gap-0 lg:p-0',
-        className
-      )}
-    >
-      <div
-        className={classNames({
-          'lg:w-[28rem]': isSidebarActive,
-          'lg:absolute lg:right-8': !isSidebarActive
-        })}
-      >
-        <PoweredByPT className='mx-auto' />
-      </div>
-      <div className='flex flex-col gap-2 items-center mx-auto'>
-        <span className='inline-block text-center text-sm font-medium'>
-          Made with ❤️ & 🤖 by{' '}
-          <a href='https://g9software.xyz' target='_blank' className='hover:text-pt-teal'>
-            Generation Software
-          </a>
-        </span>
-        <span className='text-xs font-medium text-pt-pink'>
-          By using this app you are agreeing to our{' '}
-          <Link href={LINKS.termsOfService} target='_blank' className='hover:underline'>
-            Terms and Conditions
-          </Link>
-        </span>
-      </div>
-    </footer>
   )
 }

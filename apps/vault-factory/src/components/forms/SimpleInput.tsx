@@ -13,6 +13,7 @@ interface SimpleInputProps {
   hideErrorMsgs?: boolean
   autoFocus?: boolean
   disabled?: boolean
+  readOnly?: boolean // Add readOnly prop
   needsOverride?: boolean
   keepValueOnOverride?: boolean
   onOverride?: (val: boolean) => void
@@ -33,6 +34,7 @@ export const SimpleInput = (props: SimpleInputProps) => {
     hideErrorMsgs,
     autoFocus,
     disabled,
+    readOnly, // Destructure readOnly prop
     needsOverride,
     keepValueOnOverride,
     onOverride,
@@ -84,6 +86,7 @@ export const SimpleInput = (props: SimpleInputProps) => {
         defaultValue={defaultValue}
         autoFocus={autoFocus}
         disabled={disabled || (needsOverride && !isActiveOverride)}
+        readOnly={readOnly} // Apply readOnly here
         onBlur={handleBlur}
         className={classNames(
           'px-3 py-2 text-sm leading-tight rounded-lg border outline outline-1',
