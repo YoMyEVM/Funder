@@ -29,9 +29,8 @@ export default function VaultsPage() {
 
   return (
     <Layout className='gap-6 lg:gap-8'>
-      
-      <div className="flex justify-center space-x-7 my-1"> {/* Adjusted spacing */}
-        {['Yield Lotto', 'Open Source', 'Eth Denver', 'Causes/For Good', 'ReFi','DeSci' ].map((fundType) => (
+      <div className="flex justify-center space-x-7 my-0"> {/* Adjusted spacing */}
+        {['Eth Denver', 'Open Source', 'Causes/For Good', 'ReFinance','DeScience' ].map((fundType) => (
           <button
             key={fundType}
             onClick={() => handleFundFilterChange(fundType)}
@@ -48,7 +47,7 @@ export default function VaultsPage() {
 
       {/* Secondary Fund Filters (the rest of the buttons) */}
       <div className="flex justify-center space-x-7 my-1"> {/* Adjusted spacing */}
-        {['Projects', 'NFTs', 'Culture/Meme', 'Token Rehab', 'Creators', 'Artists', 'RWA', 'NSFW'].map((fundType) => (
+        {['Culture/Meme', 'Projects', 'NFTs' , 'NSFW' , 'Yield Lotto', 'RWA', 'Artists', 'Creators' , 'Token Rehab'].map((fundType) => (
           <button
             key={fundType}
             onClick={() => handleFundFilterChange(fundType)}

@@ -82,18 +82,6 @@ export const MenuView = (props: MenuViewProps) => {
           }
         ]}
       />
-      <SettingsMenuSection
-        title={t('getHelp')}
-        items={[
-          {
-            iconContent: '?',
-            iconClassName: 'font-semibold',
-            title: t('getHelpWithCabana'),
-            onClick: () => window.open(LINKS.docs),
-            isExternalLink: true
-          }
-        ]}
-      />
     </div>
   )
 }
