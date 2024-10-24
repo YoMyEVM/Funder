@@ -29,8 +29,9 @@ export default function VaultsPage() {
 
   return (
     <Layout className='gap-6 lg:gap-8'>
-      <div className="flex justify-center space-x-7 my-0"> {/* Adjusted spacing */}
-        {['Eth Denver', 'Open Source', 'Causes/For Good', 'ReFinance','DeScience' ].map((fundType) => (
+      {/* Secondary Fund Filters (the rest of the buttons) */}
+      <div className="flex justify-center space-x-7 my-1"> {/* Adjusted spacing */}
+        {['Culture/Meme', 'Projects', 'NFTs' , 'Artists' , 'Yield Lotto', 'RWA', 'NSFW', 'Creators' , 'Token Rehab'].map((fundType) => (
           <button
             key={fundType}
             onClick={() => handleFundFilterChange(fundType)}
@@ -44,10 +45,8 @@ export default function VaultsPage() {
           </button>
         ))}
       </div>
-
-      {/* Secondary Fund Filters (the rest of the buttons) */}
-      <div className="flex justify-center space-x-7 my-1"> {/* Adjusted spacing */}
-        {['Culture/Meme', 'Projects', 'NFTs' , 'NSFW' , 'Yield Lotto', 'RWA', 'Artists', 'Creators' , 'Token Rehab'].map((fundType) => (
+      <div className="flex justify-center space-x-7 my-0"> {/* Adjusted spacing */}
+        {['Eth Denver', 'Open Source', 'Causes/For Good', 'ReFinance','DeScience' ].map((fundType) => (
           <button
             key={fundType}
             onClick={() => handleFundFilterChange(fundType)}
@@ -67,7 +66,7 @@ export default function VaultsPage() {
 
       {/* Conditionally Display Vaults */}
       {selectedFundType === 'Yield Lotto' && <VaultsDisplay />}
-      {selectedFundType === 'Open Source' && <div>Fund Open Source</div>}
+      {selectedFundType === 'Open Source' && <VaultsDisplay />}
       {selectedFundType === 'Projects' && <div>Projects Vaults</div>}
       {selectedFundType === 'NFTs' && <div>NFTs Vaults</div>}
       {selectedFundType === 'Culture/Meme' && <div>Meme</div>}
@@ -76,6 +75,10 @@ export default function VaultsPage() {
       {selectedFundType === 'Artists' && <div>Artists Vaults</div>}
       {selectedFundType === 'NSFW' && <div>NSFW Vaults</div>}
       {selectedFundType === 'Rehab' && <div>Rehab</div>}
+      {selectedFundType === 'DeScience' && <div>DeScience</div>}
+      {selectedFundType === 'Eth Denver' && <div>Eth Denver</div>}
+      {selectedFundType === 'DeScience' && <div>DeScience</div>}
+      {selectedFundType === 'ReFinance' && <div>ReFinance</div>}
     </Layout>
   )
 }
