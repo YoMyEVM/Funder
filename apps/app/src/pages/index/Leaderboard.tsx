@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 // Sample leaderboard data
 const leaderboardData = [
-  { rank: 1, vault: 'Nihilum', host: 'Hydramist', token: 'Reckful', currentRewards: 7, predictedRewards: 512 },
-  { rank: 2, vault: 'Liquid', host: 'MoonMoon', token: 'Xenon', currentRewards: 5, predictedRewards: 410 },
-  { rank: 3, vault: 'Envy', host: 'Sodapoppin', token: 'Phantom', currentRewards: 6, predictedRewards: 500 },
-  { rank: 4, vault: 'TSM', host: 'Bjergsen', token: 'WildTurtle', currentRewards: 9, predictedRewards: 600 },
+  { rank: 1, vault: 'Nihilum', host: 'Hydramist', token: 'Reckful', ongoingRewards: 7, predictedRewards: 512 },
+  { rank: 2, vault: 'Liquid', host: 'MoonMoon', token: 'Xenon', ongoingRewards: 5, predictedRewards: 410 },
+  { rank: 3, vault: 'Envy', host: 'Sodapoppin', token: 'Phantom', ongoingRewards: 6, predictedRewards: 500 },
+  { rank: 4, vault: 'TSM', host: 'Bjergsen', token: 'WildTurtle', ongoingRewards: 9, predictedRewards: 600 },
 ];
 
 const Leaderboard = () => {
@@ -46,7 +46,7 @@ const Leaderboard = () => {
           <ResultCol>{item.vault}</ResultCol>
           <ResultCol>{item.host}</ResultCol>
           <ResultCol>{item.token}</ResultCol>
-          <ResultCol>{item.currentRewards}</ResultCol>
+          <ResultCol>{item.ongoingRewards}</ResultCol>
           <ResultCol>{item.predictedRewards}</ResultCol>
           <ResultCol>
             <VoteButton onClick={() => handleUpvote(index)}>▲</VoteButton>
@@ -73,7 +73,7 @@ const Container = styled.div`
 const LadderNav = styled.div`
   display: flex;
   align-items: center;
-  background: #5055cb;
+  background: #2e707a;
   padding: 10px 25px;
   border-radius: 10px;
   border: 1px solid #686ef9;
@@ -83,7 +83,7 @@ const LadderNav = styled.div`
 const LadderTitle = styled.h1`
   flex: 2;
   font-size: 20px;
-  color: #888dff;
+  color: #fff;
   font-weight: bold;
   text-transform: uppercase;
 `;
@@ -92,7 +92,7 @@ const SearchInput = styled.input`
   flex: 1;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.1);
-  color: #888dff;
+  color: #fff;
   border: 2px solid rgba(0, 0, 0, 0);
   border-radius: 4px;
   font-size: 14px;
