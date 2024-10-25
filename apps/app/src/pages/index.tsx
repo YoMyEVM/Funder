@@ -7,6 +7,8 @@ import Link from 'next/link'
 import { getMessages } from 'src/utils'
 
 import { Layout } from '@components/Layout'
+import CardRow from './index/CardRow';
+
 
 
 interface HomePageProps {
@@ -27,7 +29,7 @@ export default function HomePage() {
 
   return (
     <Layout className='gap-2'>
-      <p>About</p>
+      <CardRow />
     </Layout>
   )
 }
