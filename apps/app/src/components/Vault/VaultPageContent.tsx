@@ -30,6 +30,7 @@ import { VaultPagePrizesSection } from './VaultPagePrizesSection'
 import { VaultPageRecentWinnersCard } from './VaultPageRecentWinnersCard'
 import { VaultPagePoolStakingContent } from './VaultPageStakingContent'
 import { VaultPageVaultListWarning } from './VaultPageVaultListWarning'
+import DexScreenerEmbed from './DexScreenerEmbed';
 
 interface VaultPageContentProps {
   queryParams: ParsedUrlQuery
