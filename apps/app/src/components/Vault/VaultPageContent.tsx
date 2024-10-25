@@ -33,64 +33,59 @@ import { VaultPageVaultListWarning } from './VaultPageVaultListWarning'
 import DexScreenerEmbed from './DexScreenerEmbed';
 
 interface VaultPageContentProps {
-  queryParams: ParsedUrlQuery
-  onFetchedVaultName?: (name: string) => void
+  queryParams: ParsedUrlQuery;
+  onFetchedVaultName?: (name: string) => void;
 }
 
 export const VaultPageContent = (props: VaultPageContentProps) => {
-  const { queryParams, onFetchedVaultName } = props
+  const { queryParams, onFetchedVaultName } = props;
 
-  const { address: userAddress } = useAccount()
-
-  const networks = useNetworks()
-  const clientsByChain = usePublicClientsByChain()
-
-  const { vaults } = useSelectedVaults()
+  const { address: userAddress } = useAccount();
+  const networks = useNetworks();
+  const clientsByChain = usePublicClientsByChain();
+  const { vaults } = useSelectedVaults();
 
   const rawChainId =
     !!queryParams.chainId && typeof queryParams.chainId === 'string'
       ? parseInt(queryParams.chainId)
-      : undefined
+      : undefined;
 
   const chainId =
-    !!rawChainId && networks.includes(rawChainId) ? (rawChainId as NETWORK) : undefined
+    !!rawChainId && networks.includes(rawChainId) ? (rawChainId as NETWORK) : undefined;
 
   const address =
     !!queryParams.vaultAddress &&
     typeof queryParams.vaultAddress === 'string' &&
     isAddress(queryParams.vaultAddress)
       ? queryParams.vaultAddress
-      : undefined
+      : undefined;
 
   const vault = useMemo(() => {
     if (!!chainId && !!address) {
-      const vaultId = getVaultId({ chainId, address })
-      return vaults?.vaults[vaultId] ?? new Vault(chainId, address, clientsByChain[chainId])
+      const vaultId = getVaultId({ chainId, address });
+      return vaults?.vaults[vaultId] ?? new Vault(chainId, address, clientsByChain[chainId]);
     }
-  }, [chainId, address, vaults])
+  }, [chainId, address, vaults]);
 
-  const { data: vaultTokenAddress, isFetched: isFetchedVaultTokenAddress } = useVaultTokenAddress(
-    vault!
-  )
-
-  const { data: share } = useVaultShareData(vault!)
+  const { data: vaultTokenAddress, isFetched: isFetchedVaultTokenAddress } = useVaultTokenAddress(vault!);
+  const { data: share } = useVaultShareData(vault!);
 
   useEffect(() => {
     if (!!vault) {
-      const name = vault.name ?? vault.shareData?.name ?? share?.name
-      !!name && onFetchedVaultName?.(name)
+      const name = vault.name ?? vault.shareData?.name ?? share?.name;
+      !!name && onFetchedVaultName?.(name);
     }
-  }, [vault, share])
+  }, [vault, share]);
 
-  const prizePoolsArray = Object.values(useSupportedPrizePools())
-  const prizePool = prizePoolsArray.find((prizePool) => prizePool.chainId === vault?.chainId)
+  const prizePoolsArray = Object.values(useSupportedPrizePools());
+  const prizePool = prizePoolsArray.find((prizePool) => prizePool.chainId === vault?.chainId);
 
-  const tokenAddresses = !!vault ? TWAB_REWARDS_SETTINGS[vault.chainId].tokenAddresses : []
+  const tokenAddresses = !!vault ? TWAB_REWARDS_SETTINGS[vault.chainId].tokenAddresses : [];
   const { data: vaultPromotionsApr } = useVaultPromotionsApr(vault!, tokenAddresses, {
     fromBlock: !!vault ? TWAB_REWARDS_SETTINGS[vault.chainId].fromBlock : undefined
-  })
+  });
 
-  const maxWidthClassName = 'max-w-screen-md'
+  const maxWidthClassName = 'max-w-screen-md';
 
   if (!!chainId && !!address && !isFetchedVaultTokenAddress) {
     return (
@@ -98,14 +93,20 @@ export const VaultPageContent = (props: VaultPageContentProps) => {
         <VaultPageHeader vault={vault} className={maxWidthClassName} />
         <Spinner />
       </>
-    )
+    );
   }
 
-  const isPoolStakingVault = !!vault && POOL_STAKING_VAULTS[vault.chainId] === lower(vault.address)
+  const isPoolStakingVault = !!vault && POOL_STAKING_VAULTS[vault.chainId] === lower(vault.address);
 
   return (
     <>
       <VaultPageHeader vault={vault} className={maxWidthClassName} />
+      
+      {/* Embed DexScreener chart using vault's chainId and vaultTokenAddress */}
+      {!!vault && !!vaultTokenAddress && (
+        <DexScreenerEmbed chainId={vault.chainId} depositToken={vaultTokenAddress} />
+      )}
+      
       {!!vault && !!prizePool && !!vaultTokenAddress ? (
         <>
           <VaultPageButtons vault={vault} className={classNames(maxWidthClassName, '-mt-4')} />
@@ -172,35 +173,27 @@ export const VaultPageContent = (props: VaultPageContentProps) => {
         />
       )}
     </>
-  )
-}
-
-
+  );
+};
 
 interface ErrorStateProps {
-  chainId?: number
-  tokenAddress?: Address
-  className?: string
+  chainId?: number;
+  tokenAddress?: Address;
+  className?: string;
 }
 
 const ErrorState = (props: ErrorStateProps) => {
-  const { chainId, tokenAddress, className } = props
+  const { chainId, tokenAddress, className } = props;
+  const t_vault = useTranslations('Vault');
+  const t_error = useTranslations('Error');
 
-  const t_vault = useTranslations('Vault')
-  const t_error = useTranslations('Error')
+  const networks = useNetworks();
 
-  const networks = useNetworks()
-
-  const isInvalidNetwork = !chainId || !networks.includes(chainId)
-  const isInvalidInterface = !tokenAddress
+  const isInvalidNetwork = !chainId || !networks.includes(chainId);
+  const isInvalidInterface = !tokenAddress;
 
   return (
-    <div
-      className={classNames(
-        'w-full max-w-md flex flex-col gap-6 items-center text-center',
-        className
-      )}
-    >
+    <div className={classNames('w-full max-w-md flex flex-col gap-6 items-center text-center', className)}>
       <ErrorPooly className='w-full max-w-[50%]' />
       {isInvalidNetwork ? (
         <div className='flex flex-col gap-2'>
@@ -221,5 +214,5 @@ const ErrorState = (props: ErrorStateProps) => {
         <Button>{t_vault('returnToVaults')}</Button>
       </Link>
     </div>
-  )
-}
+  );
+};
