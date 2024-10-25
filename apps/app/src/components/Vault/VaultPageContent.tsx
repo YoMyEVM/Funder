@@ -7,7 +7,7 @@ import {
   useVaultTokenAddress,
   useVaultYieldSource
 } from '@generationsoftware/hyperstructure-react-hooks'
-import { AlertIcon, ErrorPooly } from '@shared/react-components'
+import { ErrorPooly } from '@shared/react-components'
 import { Button, Spinner } from '@shared/ui'
 import { getBlockExplorerUrl, getVaultId, LINKS, lower, NETWORK } from '@shared/utilities'
 import classNames from 'classnames'
@@ -170,71 +170,11 @@ export const VaultPageContent = (props: VaultPageContentProps) => {
           className={maxWidthClassName}
         />
       )}
-      {!!vault && !!prizePool && !!vaultTokenAddress && (
-        <Disclaimer vault={vault} className={maxWidthClassName} />
-      )}
     </>
   )
 }
 
-interface DisclaimerProps {
-  vault: Vault
-  className?: string
-}
 
-const Disclaimer = (props: DisclaimerProps) => {
-  const { vault, className } = props
-
-  const t_vault = useTranslations('Vault')
-
-  const { data: share } = useVaultShareData(vault)
-  const { data: yieldSourceAddress } = useVaultYieldSource(vault)
-
-  const linkProps: Partial<
-    DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>
-  > = { target: '_blank', className: 'text-pt-purple-300 hover:text-pt-purple-400' }
-
-  return (
-    <div
-      className={classNames(
-        'w-full flex flex-col gap-4 items-center p-6 text-pt-purple-100 bg-pt-transparent rounded-lg',
-        className
-      )}
-    >
-      <div className='flex gap-2 items-center'>
-        <AlertIcon className='w-5 h-5' />
-        <span className='lg:font-semibold'>
-          {t_vault('learnAboutVault', { vaultName: vault.name ?? share?.name ?? '?' })}
-        </span>
-      </div>
-      <span>
-        {t_vault.rich('smartContractRisk', {
-          docsLink: (chunks) => (
-            <a href={LINKS.docs} {...linkProps}>
-              {chunks}
-            </a>
-          ),
-          vaultLink: (chunks) => (
-            <a href={getBlockExplorerUrl(vault.chainId, vault.address)} {...linkProps}>
-              {chunks}
-            </a>
-          ),
-          yieldLink: (chunks) => (
-            <a
-              href={getBlockExplorerUrl(
-                vault.chainId,
-                yieldSourceAddress ?? `${vault.address}/#readContract`
-              )}
-              {...linkProps}
-            >
-              {chunks}
-            </a>
-          )
-        })}
-      </span>
-    </div>
-  )
-}
 
 interface ErrorStateProps {
   chainId?: number
