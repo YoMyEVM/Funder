@@ -7,12 +7,9 @@ import { mainnetVaults } from './mainnet'
 import { optimismVaults } from './optimism'
 import { scrollVaults } from './scroll'
 
-const defaultVaultList: VaultList = {
-  name: 'Cabana Vault List',
+const NSFWVaultList: VaultList = {
+  name: 'nsfw Vault List',
   keywords: [
-    'pooltogether',
-    'cabana',
-    'g9',
     'ethereum',
     'optimism',
     'base',
@@ -33,4 +30,4 @@ const defaultVaultList: VaultList = {
   ]
 }
 
-export default defaultVaultList
+export default nsfwVaultList
