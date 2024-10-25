@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
+
+
 const gooes = [
   { start: '#81FBB8', end: '#28C76F', title: 'Top Inflows' },
   { start: '#FFF6B7', end: '#F6416C', title: 'Top Outflows' },
@@ -28,7 +30,8 @@ const CardRow: React.FC = () => {
           isSelected={index === selectedIndex}
           onClick={() => handleSelect(index)}
         >
-          <CardTitle>{title}</CardTitle>  {/* Display the title */}
+
+          <CardTitle>{title}</CardTitle>
         </ColorCard>
       ))}
     </PaletteContainer>
@@ -37,7 +40,6 @@ const CardRow: React.FC = () => {
 
 export default CardRow;
 
-// Styled components for layout and styling
 interface ColorCardProps {
   start: string;
   end: string;
@@ -54,11 +56,13 @@ const PaletteContainer = styled.div`
 const ColorCard = styled.div<ColorCardProps>`
   flex: 1 1 8%;
   height: 130px;
-  margin: 5px;
+  width: 100px;
+  margin: 7px;
   background-image: linear-gradient(135deg, ${({ start }) => start} 0%, ${({ end }) => end} 100%);
   border-radius: 8px;
   cursor: pointer;
   display: flex;
+  flex-direction: column;  // Change flex direction to column to stack logo and title
   align-items: center;
   justify-content: center;
   color: black;
@@ -74,4 +78,12 @@ const ColorCard = styled.div<ColorCardProps>`
 const CardTitle = styled.div`
   font-size: 18px;
   text-align: center;
+  margin-top: 10px;  // Add some space between the logo and the title
+`;
+
+// Style for the logo
+const Logo = styled.img`
+  width: 40px;    // Adjust size as needed
+  height: auto;
+  margin-bottom: 5px;  // Add some space below the logo
 `;
