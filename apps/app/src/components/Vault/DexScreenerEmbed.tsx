@@ -9,9 +9,12 @@ const DexScreenerEmbed: React.FC<DexScreenerEmbedProps> = ({ chainId, depositTok
   // Mapping chain IDs to network names for DexScreener
   const chainNameById: { [key: number]: string } = {
     1: 'ethereum',
-    56: 'bsc',
     137: 'polygon',
-    // Add other chainId mappings here as needed
+    10: 'optimism',
+    8453: 'base',
+    100: 'gnosischain',
+    534352: 'scroll',
+    42161: 'arbitrum',
   };
 
   const networkName = chainNameById[chainId];
@@ -21,14 +24,14 @@ const DexScreenerEmbed: React.FC<DexScreenerEmbedProps> = ({ chainId, depositTok
     return <p>Unsupported network for Dexscreener chart</p>;
   }
 
-  // Dexscreener URL with dynamic network and token address
-  const dexscreenerUrl = `https://dexscreener.com/${networkName}/${depositToken}?embed=1&theme=dark&info=0`;
+  // Dexscreener URL with dynamic network and token address, hiding recent trades
+  const dexscreenerUrl = `https://dexscreener.com/${networkName}/${depositToken}?embed=1&theme=dark&trades=0&info=0`;
 
   return (
-    <div id="dexscreener-embed" style={{ position: 'relative', width: '100%', paddingBottom: '125%' }}>
+    <div id="dexscreener-embed" style={{ position: 'relative', width: '100%', paddingBottom: '100%' }}>
       <iframe
         src={dexscreenerUrl}
-        style={{ position: 'absolute', width: '100%', height: '100%', top: 0, left: 0, border: 0 }}
+        style={{ position: 'absolute', width: '100%', height: '40%', top: 0, left: 0, border: 0 }}
         allowFullScreen
       ></iframe>
     </div>

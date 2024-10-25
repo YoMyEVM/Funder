@@ -100,16 +100,20 @@ export const VaultPageContent = (props: VaultPageContentProps) => {
 
   return (
     <>
-      <VaultPageHeader vault={vault} className={maxWidthClassName} />
+    {vault && (
+   <>
+    <VaultPageHeader vault={vault} className={maxWidthClassName} />
+    <VaultPageButtons vault={vault} className={classNames(maxWidthClassName, '-mt-4')} />
+    </>
+  )}
+
       
-      {/* Embed DexScreener chart using vault's chainId and vaultTokenAddress */}
       {!!vault && !!vaultTokenAddress && (
         <DexScreenerEmbed chainId={vault.chainId} depositToken={vaultTokenAddress} />
       )}
       
       {!!vault && !!prizePool && !!vaultTokenAddress ? (
         <>
-          <VaultPageButtons vault={vault} className={classNames(maxWidthClassName, '-mt-4')} />
           <VaultPageVaultListWarning vault={vault} className={maxWidthClassName} />
           {!!userAddress && (
             <VaultPageInfo
