@@ -8,6 +8,7 @@ import { getMessages } from 'src/utils'
 
 import { Layout } from '@components/Layout'
 import CardRow from './index/CardRow';
+import Leaderboard from './index/Leaderboard';
 
 
 
@@ -30,6 +31,7 @@ export default function HomePage() {
   return (
     <Layout className='gap-2'>
       <CardRow />
+      <Leaderboard />
     </Layout>
   )
 }
