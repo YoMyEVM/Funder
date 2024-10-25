@@ -40,8 +40,8 @@ export const Navbar = () => {
         className='font-grotesk'
       >
         {/* Left Side Branding */}
-        {/* Update the href to link to the landing page */}
-        <Link href='/landing-page' className='cursor-pointer z-30'>
+        {/* Update href to '/' for home page */}
+        <Link href='/' className='cursor-pointer z-30'>
           <Logo smLogoClassName='w-8' mdLogoClassName='w-[150px]' />
         </Link>
 
