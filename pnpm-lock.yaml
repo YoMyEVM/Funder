@@ -6398,10 +6398,6 @@ packages:
   sudo-prompt@9.2.1:
     resolution: {integrity: sha512-Mu7R0g4ig9TUuGSxJavny5Rv0egCEtpZRNMrZaYS1vxkiIxGiGUwoezU3LazIQ+KE04hTrTfNPgxU5gzi7F5Pw==}
 
-  superstruct@1.0.3:
-    resolution: {integrity: sha512-8iTn3oSS8nRGn+C2pgXSKPI3jmpm6FExNazNpjvqS6ZUJQCej3PUXEKM8NjHBOs54ExM+LPW/FBRhymrdcCiSg==}
-    engines: {node: '>=14.0.0'}
-
   superstruct@1.0.4:
     resolution: {integrity: sha512-7JpaAoX2NGyoFlI9NBh66BQXGONc+uE+MRS5i2iOBKuS4e+ccgMDjATgZldkah+33DakBxDHiss9kvUcGAO8UQ==}
     engines: {node: '>=14.0.0'}
@@ -8700,11 +8696,11 @@ snapshots:
       '@ethereumjs/tx': 4.2.0
       '@noble/hashes': 1.5.0
       '@scure/base': 1.1.9
-      '@types/debug': 4.1.7
-      debug: 4.3.4
+      '@types/debug': 4.1.12
+      debug: 4.3.7
       pony-cause: 2.1.10
-      semver: 7.6.0
-      superstruct: 1.0.3
+      semver: 7.6.3
+      superstruct: 1.0.4
     transitivePeerDependencies:
       - supports-color
 
@@ -8714,10 +8710,10 @@ snapshots:
       '@metamask/superstruct': 3.1.0
       '@noble/hashes': 1.5.0
       '@scure/base': 1.1.9
-      '@types/debug': 4.1.7
-      debug: 4.3.4
+      '@types/debug': 4.1.12
+      debug: 4.3.7
       pony-cause: 2.1.10
-      semver: 7.6.0
+      semver: 7.6.3
       uuid: 9.0.1
     transitivePeerDependencies:
       - supports-color
@@ -14137,8 +14133,6 @@ snapshots:
       ts-interface-checker: 0.1.13
 
   sudo-prompt@9.2.1: {}
-
-  superstruct@1.0.3: {}
 
   superstruct@1.0.4: {}
 
