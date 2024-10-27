@@ -36,7 +36,7 @@
 .step {
   font-weight: 300;
   font-size: 3rem; /* Larger text size */
-  color: #fff; /* Set flip text to specified color */
+  color: #B8FF00; /* Set flip text to specified color */
   display: block;
   position: absolute;
   top: -100px;
