@@ -54,7 +54,7 @@ const AnimatedComponent: React.FC = () => {
       tick++;
       if (!ctx) return;
       
-      ctx.fillStyle = '#111';
+      ctx.fillStyle = '#000';
       ctx.fillRect(0, 0, w, h);
 
       const addedAng = opts.rotYvel * tick;

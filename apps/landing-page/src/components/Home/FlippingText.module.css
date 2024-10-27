@@ -33,6 +33,10 @@
   margin-right:-80px;
 }
 
+.highlight {
+  color: #00E0FF;
+}
+
 .step {
   font-weight: 300;
   font-size: 3rem; /* Larger text size */

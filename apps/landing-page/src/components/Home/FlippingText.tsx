@@ -64,7 +64,9 @@ const FlippingText: React.FC = () => {
         </span>
       </h1>
       <h2 className={styles.heading2}>
-        Without Spending and <span className={styles.win}>Win</span> Money
+        <span className={styles.highlight}>Without Spending and </span>
+        <span className={styles.win}>Win</span>
+        <span className={styles.highlight}> Money</span>
       </h2>
     </div>
   );
