@@ -30,13 +30,13 @@
   width: 400px; /* Width adjusted to center */
   height: 60px;
   top: 10px;
-  margin-right:-50px;
+  margin-right:-80px;
 }
 
 .step {
   font-weight: 300;
   font-size: 3rem; /* Larger text size */
-  color: #c6f259; /* Set flip text to specified color */
+  color: #fff; /* Set flip text to specified color */
   display: block;
   position: absolute;
   top: -100px;
