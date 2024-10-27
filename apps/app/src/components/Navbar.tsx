@@ -23,9 +23,9 @@ export const Navbar = () => {
     { href: '/prizes', name: t_nav('prizes') },
     { href: '/vaults', name: t_nav('vaults') },
     { href: '/account', name: t_nav('account') },
-    { href: '/launch', name: t_nav('launch') },
-    { href: '/marketing', name: t_nav('marketing') },
-    { href: '/hack', name: t_nav('hack') }
+  //  { href: '/launch', name: t_nav('launch') },
+  //  { href: '/marketing', name: t_nav('marketing') },
+  //  { href: '/hack', name: t_nav('hack') }
   ]
 
   return (

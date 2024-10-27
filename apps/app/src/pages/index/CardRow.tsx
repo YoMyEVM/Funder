@@ -5,12 +5,12 @@ import styled from 'styled-components';
 
 
 const gooes = [
-  { start: '#81FBB8', end: '#28C76F', title: 'Top Inflows' },
-  { start: '#FFF6B7', end: '#F6416C', title: 'Top Outflows' },
-  { start: '#FEB692', end: '#EA5455', title: 'Most Active' },
-  { start: '#CE9FFC', end: '#7367F0', title: 'Top Voted' },
-  { start: '#90F7EC', end: '#32CCBC', title: 'Best Performer' },
-  { start: '#E2B0FF', end: '#9F44D3', title: 'Recent Deposited' },
+  { start: '#FF4F8B', end: '#FF8F54', title: 'Top Inflows' },           
+  { start: '#F26DE5', end: '#AC53F2', title: 'Top Outflows' },   
+  { start: '#FFDD77', end: '#FF4D9D', title: 'Most Active' },           
+  { start: '#D695FF', end: '#7053FF', title: 'Top Voted' },             
+  { start: '#4FD2C3', end: '#4EEECF', title: 'Best Performer' },    
+  { start: '#FFDA7D', end: '#FF6A3A', title: 'Recent Deposited' },      
 ];
 
 const CardRow: React.FC = () => {

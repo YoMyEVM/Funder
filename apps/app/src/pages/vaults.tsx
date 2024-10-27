@@ -46,7 +46,7 @@ export default function VaultsPage() {
         ))}
       </div>
       <div className="flex justify-center space-x-7 my-0"> {/* Adjusted spacing */}
-        {['Eth Denver', 'Open Source', 'Causes/For Good', 'ReFinance','DeScience' ].map((fundType) => (
+        {['Eth Denver', 'Open Source', 'Causes/For Good', 'Research', 'ReFinance','DeScience' ].map((fundType) => (
           <button
             key={fundType}
             onClick={() => handleFundFilterChange(fundType)}
