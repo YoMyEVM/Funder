@@ -48,12 +48,27 @@
     }
   },
   "Vaults": {
-    "filter": "फ़िल्टर",
+    "depositAndWin": "Deposit ",
+    "fundOpenSource": "opensource",
+    "fundProjects": "projects",
+    "fundResearch": "research",
+    "fundNFTs": "nfts",
+    "fundCultureMeme": "culture",
+    "fundGoodCauses": "causes",
+    "fundCreators": "creators",
+    "fundArtists": "fjfj",
+    "fundNSFW": "lsl",
+    "fundLongtail": "sfds",
+    "fundEthDenver": "ll",
+    "fundDeScience": "b",
+    "fundReFinance": "f",
+    "fundSelfGrowth": "ff",
+    "filter": "Filter",
     "filters": {
-      "showAll": "सब दिखाएं",
-      "inWallet": "आपके बटुए में",
-      "stablecoins": "स्थिर सिक्के",
-      "allVaultLists": "सभी वॉल्ट सूचियाँ"
+      "showAll": "Show All",
+      "inWallet": "In Your Wallet",
+      "stablecoins": "Stablecoins",
+      "allVaultLists": "All Vault Lists"
     },
     "manageVaultLists": "वॉल्ट सूचियाँ प्रबंधित करें",
     "clearFilters": "फ़िल्टर साफ़ करें",

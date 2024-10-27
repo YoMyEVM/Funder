@@ -45,12 +45,27 @@
     }
   },
   "Vaults": {
-    "filter": "Фильтр",
+    "depositAndWin": "Deposit ",
+    "fundOpenSource": "opensource",
+    "fundProjects": "projects",
+    "fundResearch": "research",
+    "fundNFTs": "nfts",
+    "fundCultureMeme": "culture",
+    "fundGoodCauses": "causes",
+    "fundCreators": "creators",
+    "fundArtists": "fjfj",
+    "fundNSFW": "lsl",
+    "fundLongtail": "sfds",
+    "fundEthDenver": "ll",
+    "fundDeScience": "b",
+    "fundReFinance": "f",
+    "fundSelfGrowth": "ff",
+    "filter": "Filter",
     "filters": {
-      "showAll": "Показать все",
-      "inWallet": "В вашем кошельке",
-      "stablecoins": "Стабильные монеты",
-      "allVaultLists": "Все списки хранилищ"
+      "showAll": "Show All",
+      "inWallet": "In Your Wallet",
+      "stablecoins": "Stablecoins",
+      "allVaultLists": "All Vault Lists"
     },
     "manageVaultLists": "Управление списками хранилищ",
     "clearFilters": "Очистить фильтры",

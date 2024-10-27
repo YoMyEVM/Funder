@@ -45,12 +45,27 @@
     }
   },
   "Vaults": {
-    "filter": "필터",
+    "depositAndWin": "Deposit ",
+    "fundOpenSource": "opensource",
+    "fundProjects": "projects",
+    "fundResearch": "research",
+    "fundNFTs": "nfts",
+    "fundCultureMeme": "culture",
+    "fundGoodCauses": "causes",
+    "fundCreators": "creators",
+    "fundArtists": "fjfj",
+    "fundNSFW": "lsl",
+    "fundLongtail": "sfds",
+    "fundEthDenver": "ll",
+    "fundDeScience": "b",
+    "fundReFinance": "f",
+    "fundSelfGrowth": "ff",
+    "filter": "Filter",
     "filters": {
-      "showAll": "모두 보기",
-      "inWallet": "지갑 안에 있는",
-      "stablecoins": "스테이블코인",
-      "allVaultLists": "모든 금고 목록"
+      "showAll": "Show All",
+      "inWallet": "In Your Wallet",
+      "stablecoins": "Stablecoins",
+      "allVaultLists": "All Vault Lists"
     },
     "manageVaultLists": "금고 목록 관리",
     "clearFilters": "필터 지우기",

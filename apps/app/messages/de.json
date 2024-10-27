@@ -66,12 +66,27 @@
     }
   },
   "Vaults": {
-    "filter": "Filtern",
+    "depositAndWin": "Deposit ",
+    "fundOpenSource": "opensource",
+    "fundProjects": "projects",
+    "fundResearch": "research",
+    "fundNFTs": "nfts",
+    "fundCultureMeme": "culture",
+    "fundGoodCauses": "causes",
+    "fundCreators": "creators",
+    "fundArtists": "fjfj",
+    "fundNSFW": "lsl",
+    "fundLongtail": "sfds",
+    "fundEthDenver": "ll",
+    "fundDeScience": "b",
+    "fundReFinance": "f",
+    "fundSelfGrowth": "ff",
+    "filter": "Filter",
     "filters": {
-      "showAll": "Alle anzeigen",
-      "inWallet": "In Deiner Wallet",
+      "showAll": "Show All",
+      "inWallet": "In Your Wallet",
       "stablecoins": "Stablecoins",
-      "allVaultLists": "Alle Vault Listen"
+      "allVaultLists": "All Vault Lists"
     },
     "manageVaultLists": "Vault Listen bearbeiten",
     "clearFilters": "Filter löschen",
