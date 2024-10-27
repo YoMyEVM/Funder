@@ -1,4 +1,3 @@
-// components/FlippingText.tsx
 
 import React, { useEffect, useState } from 'react';
 import styles from './FlippingText.module.css';
@@ -33,7 +32,7 @@ const textOptions = [
   "Home Renovations",
   "Your Parent's Bills",
   "Sustainable Ag",
-  "Anything"
+  "Anything",
 ];
 
 const FlippingText: React.FC = () => {
@@ -64,12 +63,11 @@ const FlippingText: React.FC = () => {
           ))}
         </span>
       </h1>
-      {/* <h2 className={styles.heading2}>
+      <h2 className={styles.heading2}>
         Without Spending and <span className={styles.win}>Win</span> Money
-      </h2> */}
+      </h2>
     </div>
   );
 };
 
 export default FlippingText;
-
