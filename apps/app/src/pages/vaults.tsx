@@ -4,7 +4,6 @@ import { GetStaticProps } from 'next';
 import { getMessages } from 'src/utils';
 import { Layout } from '@components/Layout';
 import { VaultFilters } from '@components/Vault/VaultFilters';
-import { VaultsDisclaimer } from '@components/Vault/VaultsDisclaimer';
 import { VaultsDisplay } from '@components/Vault/VaultsDisplay';
 import { VaultsHeader } from '@components/Vault/VaultsHeader';
 import ButtonRow from '@components/Vault/ButtonRow';
@@ -30,7 +29,6 @@ export default function VaultsPage() {
       <ButtonRow setSelectedButton={setSelectedButton} />
       <VaultsHeader selectedButton={selectedButton} />
       <VaultFilters />
-      <VaultsDisclaimer />
       <VaultsDisplay />
     </Layout>
   );
