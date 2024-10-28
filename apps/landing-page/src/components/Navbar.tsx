@@ -56,21 +56,20 @@ const MobileNavbar = (props: MobileNavbarProps) => {
     </div>
   )
 }
-
 interface NavbarActionsProps {
-  linkClassName?: string
-  buttonClassName?: string
-  innerButtonClassName?: string
+  linkClassName?: string;
+  buttonClassName?: string;
+  innerButtonClassName?: string;
 }
 
 const NavbarActions = (props: NavbarActionsProps) => {
-  const { buttonClassName, innerButtonClassName } = props
+  const { linkClassName, buttonClassName, innerButtonClassName } = props;
 
-  const { isMobile } = useScreenSize()
+  const { isMobile } = useScreenSize();
 
   return (
     <>
-
+      <NavbarLink href='/biz' name='For Business' className={linkClassName} />
       <Button
         href={LINKS.app}
         target='_blank'
@@ -81,8 +80,8 @@ const NavbarActions = (props: NavbarActionsProps) => {
         <span className={innerButtonClassName}>Launch App</span>
       </Button>
     </>
-  )
-}
+  );
+};
 
 interface NavbarLinkProps {
   href: string
