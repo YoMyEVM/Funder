@@ -1,6 +1,6 @@
 {
   "extends": "../../shared/config/base.tsconfig.json",
-  "include": ["."],
+  "include": [".", "../../apps/app/src/hooks/useFilteredVaults.ts"],
   "exclude": ["dist", "node_modules"],
   "compilerOptions": {
     "lib": ["dom", "esnext"],

@@ -2,7 +2,7 @@ import { useAllPrizeValue } from '@generationsoftware/hyperstructure-react-hooks
 import { CurrencyValue, TokenIcon } from '@shared/react-components'
 import { Spinner } from '@shared/ui'
 import { isTestnet, lower, NETWORK, sToMs } from '@shared/utilities'
-import defaultVaultList from '@vaultLists/default'
+import defaultVaultList from '@vaultLists/yieldlotto'
 import classNames from 'classnames'
 import { useTranslations } from 'next-intl'
 import { useEffect, useMemo, useState } from 'react'

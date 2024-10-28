@@ -1,4 +1,4 @@
-import defaultVaultList from '@vaultLists/default'
+import defaultVaultList from '@vaultLists/yieldlotto'
 import { NextResponse } from 'next/server'
 
 export function GET(): NextResponse {

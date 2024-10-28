@@ -24,7 +24,6 @@ import { DrawModal } from './Modals/DrawModal'
 import { SettingsModal } from './Modals/SettingsModal'
 import { WithdrawModal } from './Modals/WithdrawModal'
 import { Navbar } from './Navbar'
-import { VaultListHandler } from './VaultListHandler'
 import { Footer } from './Footer'
 
 interface LayoutProps {
@@ -153,7 +152,6 @@ export const Layout = (props: LayoutProps) => {
         onVerify={getDiscordInvite}
       />
 
-      <VaultListHandler />
 
       <main
         className={classNames(

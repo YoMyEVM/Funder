@@ -1,6 +1,6 @@
 import { useIsTestnets } from '@shared/generic-react-hooks'
 import { NETWORK, PRIZE_POOLS } from '@shared/utilities'
-import defaultVaultList from '@vaultLists/default'
+import defaultVaultList from '@vaultLists/yieldlotto'
 import { SUPPORTED_NETWORKS } from '@constants/config'
 
 /**

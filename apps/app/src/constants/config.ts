@@ -24,7 +24,7 @@ import {
   POOL_TOKEN_ADDRESSES,
   USDC_TOKEN_ADDRESSES
 } from '@shared/utilities'
-import defaultVaultList from '@vaultLists/default'
+import defaultVaultList from '@vaultLists/yieldlotto'
 import memeVaultList from '@vaultLists/meme'
 import { Address, parseEther } from 'viem'
 import {
