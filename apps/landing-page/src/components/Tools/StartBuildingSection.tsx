@@ -15,37 +15,37 @@ export const StartBuildingSection = (props: StartBuildingSectionProps) => {
       <div className='flex flex-col gap-10 md:flex-row md:flex-wrap md:justify-center'>
         <StartBuildingItem
           href={LINKS.vaultFactory}
-          imgSrc='/factoryScreenshot.png'
+          imgSrc='/comingsoon.png'
           title='Deploy from the Fund Factory'
           description='Launch your own Fund vault for any ERC-4626 compatible yield sources.'
         />
         <StartBuildingItem
           href={LINKS.vaultListCreator}
-          imgSrc='/listsScreenshot.png'
+          imgSrc='/comingsoon.png'
           title='Embedabble Rewards Program'
           description='Create an embed a points or rewards system into any website.'
         />
         <StartBuildingItem
           href={LINKS.analytics}
-          imgSrc='/cabanalyticsScreenshot.png'
+          imgSrc='/comingsoon.png'
           title='Ecosystem Analytics'
           description='View real time Analytics and Ecosystem health metrics across all chains.'
         />
         <StartBuildingItem
           href="https://myevm.casa"
-          imgSrc='/rewardsScreenshot.png'
+          imgSrc='/comingsoon.png'
           title='Protected Launchpad'
           description='Create and manage bonus rewards for any PoolTogether prize vault.'
         />
         <StartBuildingItem
           href="https://myevm.casa"
-          imgSrc='/cabanalyticsScreenshot.png'
+          imgSrc='/comingsoon.png'
           title='Captive Marketing'
           description='Create an endless prize fund while keeping your marketing budget.'
         />
         <StartBuildingItem
           href={LINKS.rewardsBuilder}
-          imgSrc='/rewardsScreenshot.png'
+          imgSrc='/comingsoon.png'
           title=' Reach more Users'
           description='Create and manage bonus rewards for any fund vault.'
         />
