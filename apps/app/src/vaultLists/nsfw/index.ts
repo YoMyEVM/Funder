@@ -30,4 +30,4 @@ const NSFWVaultList: VaultList = {
   ]
 }
 
-export default nsfwVaultList
+export default NSFWVaultList
