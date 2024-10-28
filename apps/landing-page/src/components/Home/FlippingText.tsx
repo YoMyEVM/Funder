@@ -8,7 +8,7 @@ const textOptions = [
   "Open Source",
   "Content Creators",
   "Research",
-  "Saving's BirthDay Cards",
+  "Perpetual Gifts",
   "Artists",
   "Friends",
   "Projects",
@@ -18,12 +18,14 @@ const textOptions = [
   "Your Child's Dream",
   "Faith Organizations",
   "Social Causes",
-  "DJs",
+  "Employee Perks",
+  "DJ Parties",
+  "a Class Reunion",
   "Startups",
   "Education",
   "a Future Wedding",
   "Entrepreneurs",
-  "Students",
+  "Scholarships",
   "Long Term Gifting",
   "College",
   "Emergency Savings",
@@ -66,9 +68,9 @@ const FlippingText: React.FC = () => {
         </span>
       </h1>
       <h2 className={styles.heading2}>
-        <span className={styles.highlight}>Without Spending and </span>
-        <span className={styles.win}>Win</span>
-        <span className={styles.highlight}> Money</span>
+       <span className={styles.underlineWhite}>Without Spending</span>
+        <span className={styles.and}> and </span>
+        <span className={styles.win}>Win Money</span>
       </h2>
     </div>
   );

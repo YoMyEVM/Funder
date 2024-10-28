@@ -15,12 +15,16 @@
   margin: 0;
 }
 
+.and {
+  color: #fff; 
+}
+
 .win {
   color: #01f189; 
 }
 .heading2 {
   font-size: 2.5rem;
-  color: #ffffff; /* White color for subheading */
+  color: #ff47bb; /* White color for subheading */
   margin-top: 10px;
 }
 
@@ -35,6 +39,8 @@
 
 .highlight {
   color: #00E0FF;
+  text-decoration: underline;
+  text-decoration-color: white;
 }
 
 .step {
