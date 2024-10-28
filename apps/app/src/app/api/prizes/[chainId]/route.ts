@@ -12,8 +12,7 @@ export async function GET(
   const chainId = getChainIdFromParams(ctx.params)
 
   if (!chainId) {
-    return NextResponse.json({ : 'Invalid network' }, { status: 400 })
-  }
+    return NextResponse.json({ message: 'Invalid network' }, { status: 400 })  }
 
   try {
     const publicClient = getPublicClient(chainId, req)
